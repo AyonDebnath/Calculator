@@ -5,9 +5,16 @@ import javax.swing.*;
 class Calculator
 {
     private JFrame frame;
+    private String num1;
+    private String num2;
+    private String opp; 
+    JLabel display;
+
     public Calculator()
     {
-        
+        num1 = "";
+        num2 = "";
+        opp = "";
     }
 
     public void ImageViewer()
@@ -27,7 +34,7 @@ class Calculator
         
         gbc.gridx = 2;
         gbc.gridy = 0;
-        JLabel display = new JLabel("nul");
+        display = new JLabel("nul");
         contentPane.add(display, gbc);
 
         gbc.gridx = 0;
@@ -103,6 +110,168 @@ class Calculator
 
         frame.pack();
         frame.setVisible(true);
+
+
+
+        // Action Listeners
+        one.addActionListener((ActionEvent ev) -> {one();});
+        two.addActionListener((ActionEvent ev) -> {two();});
+        three.addActionListener((ActionEvent ev) -> {three();});
+        four.addActionListener((ActionEvent ev) -> {four();});
+        five.addActionListener((ActionEvent ev) -> {five();});
+        six.addActionListener((ActionEvent ev) -> {six();});
+        seven.addActionListener((ActionEvent ev) -> {seven();});
+        eight.addActionListener((ActionEvent ev) -> {eight();});
+        nine.addActionListener((ActionEvent ev) -> {nine();});
+        plus.addActionListener((ActionEvent ev) -> {plus();});
+        equal.addActionListener((ActionEvent ev) -> {equal();});
+    }
+    public void one()
+    {
+        if (opp == "") 
+        {
+            num1 = num1 + "1";
+        }
+        else 
+        {
+            num2 = num2 + "1";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+    public void two()
+    {
+        if (opp == "") 
+        {
+            num1 = num1 + "2";
+        }
+        else 
+        {
+            num2 = num2 + "2";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+    public void three()
+    {
+        if (opp == "") 
+        {
+            num1 = num1 + "3";
+        }
+        else 
+        {
+            num2 = num2 + "3";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+    public void four()
+    {
+        if (opp == "") 
+        {
+            num1 = num1 + "4";
+        }
+        else 
+        {
+            num2 = num2 + "4";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+    public void five()
+    {
+        if (opp == "") 
+        {
+            num1 = num1 + "5";
+        }
+        else 
+        {
+            num2 = num2 + "5";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+    public void six()
+    {
+        if (opp == "") 
+        {
+            num1 = num1 + "6";
+        }
+        else 
+        {
+            num2 = num2 + "6";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+    public void seven()
+    {
+        if (opp == "") 
+        {
+            num1 = num1 + "7";
+        }
+        else 
+        {
+            num2 = num2 + "7";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+    public void eight()
+    {
+        if (opp == "") 
+        {
+            num1 = num1 + "8";
+        }
+        else 
+        {
+            num2 = num2 + "8";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+    public void nine()
+    {
+        if (opp == "") 
+        {
+            num1 = num1 + "9";
+        }
+        else 
+        {
+            num2 = num2 + "9";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+
+    public void plus()
+    {
+        if(opp=="")
+        {
+            opp = opp + "+";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+
+    public void equal()
+    {
+        int result;
+        String answer="";
+        if(opp.equals("+"))
+        {
+            result  = Integer.parseInt(num1) + Integer.parseInt(num2);
+            answer = result +"";
+        }
+        else if(opp.equals("-"))
+        {
+            result  = Integer.parseInt(num1) - Integer.parseInt(num2);
+            answer = result +"";
+        }
+        else if(opp.equals("*"))
+        {
+            result  = Integer.parseInt(num1) * Integer.parseInt(num2);
+            answer = result +"";
+        }
+        else if(opp.equals("/"))
+        {
+            result  = Integer.parseInt(num1) / Integer.parseInt(num2);
+            answer = result +"";
+        }
+        display.setText(answer);
+        num1 = "";
+        num2 = "";
+        opp = "";
     }
 
     public static void main(String[] args) 
