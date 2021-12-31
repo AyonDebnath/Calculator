@@ -124,6 +124,9 @@ class Calculator
         eight.addActionListener((ActionEvent ev) -> {eight();});
         nine.addActionListener((ActionEvent ev) -> {nine();});
         plus.addActionListener((ActionEvent ev) -> {plus();});
+        minus.addActionListener((ActionEvent ev) -> {minus();});
+        multiplication.addActionListener((ActionEvent ev) -> {multiplication();});
+        division.addActionListener((ActionEvent ev) -> {division();});
         equal.addActionListener((ActionEvent ev) -> {equal();});
     }
     public void one()
@@ -240,6 +243,33 @@ class Calculator
         if(opp=="")
         {
             opp = opp + "+";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+
+    public void minus()
+    {
+        if(opp=="")
+        {
+            opp = opp + "-";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+
+    public void multiplication()
+    {
+        if(opp=="")
+        {
+            opp = opp + "X";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+
+    public void division()
+    {
+        if(opp=="")
+        {
+            opp = opp + "/";
         }
         display.setText(num1 +" " + opp + " " + num2);
     }
