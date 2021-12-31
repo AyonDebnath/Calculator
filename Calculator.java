@@ -34,7 +34,7 @@ class Calculator
         
         gbc.gridx = 2;
         gbc.gridy = 0;
-        display = new JLabel("nul");
+        display = new JLabel(num1 +" " + opp + " " + num2);
         contentPane.add(display, gbc);
 
         gbc.gridx = 0;
@@ -259,7 +259,7 @@ class Calculator
 
     public void plus()
     {
-        if(opp=="")
+        if(opp=="" && num1 != "")
         {
             opp = opp + "+";
         }
@@ -268,7 +268,7 @@ class Calculator
 
     public void minus()
     {
-        if(opp=="")
+        if(opp=="" && num1 != "")
         {
             opp = opp + "-";
         }
@@ -277,7 +277,7 @@ class Calculator
 
     public void multiplication()
     {
-        if(opp=="")
+        if(opp=="" && num1 != "")
         {
             opp = opp + "X";
         }
@@ -286,7 +286,7 @@ class Calculator
 
     public void division()
     {
-        if(opp=="")
+        if(opp=="" && num1 != "")
         {
             opp = opp + "/";
         }
@@ -307,7 +307,7 @@ class Calculator
             result  = Integer.parseInt(num1) - Integer.parseInt(num2);
             answer = result +"";
         }
-        else if(opp.equals("*"))
+        else if(opp.equals("X"))
         {
             result  = Integer.parseInt(num1) * Integer.parseInt(num2);
             answer = result +"";
