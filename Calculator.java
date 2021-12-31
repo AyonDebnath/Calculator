@@ -104,6 +104,11 @@ class Calculator
 
         gbc.gridx = 3;
         gbc.gridy = 3;
+        JButton zero = new JButton("0");
+        contentPane.add(zero, gbc);
+
+        gbc.gridx = 4;
+        gbc.gridy = 3;
         gbc.gridwidth = 2;
         JButton equal = new JButton("=");        
         contentPane.add(equal, gbc);
@@ -123,6 +128,7 @@ class Calculator
         seven.addActionListener((ActionEvent ev) -> {seven();});
         eight.addActionListener((ActionEvent ev) -> {eight();});
         nine.addActionListener((ActionEvent ev) -> {nine();});
+        zero.addActionListener((ActionEvent ev) -> {zero();});
         plus.addActionListener((ActionEvent ev) -> {plus();});
         minus.addActionListener((ActionEvent ev) -> {minus();});
         multiplication.addActionListener((ActionEvent ev) -> {multiplication();});
@@ -234,6 +240,19 @@ class Calculator
         else 
         {
             num2 = num2 + "9";
+        }
+        display.setText(num1 +" " + opp + " " + num2);
+    }
+
+    public void zero()
+    {
+        if (opp == "") 
+        {
+            num1 = num1 + "0";
+        }
+        else 
+        {
+            num2 = num2 + "0";
         }
         display.setText(num1 +" " + opp + " " + num2);
     }
