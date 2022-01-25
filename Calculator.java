@@ -134,6 +134,12 @@ class Calculator
         multiplication.addActionListener((ActionEvent ev) -> {multiplication();});
         division.addActionListener((ActionEvent ev) -> {division();});
         equal.addActionListener((ActionEvent ev) -> {equal();});
+
+
+        //housekeeping
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
+    
     }
     public void one()
     {
